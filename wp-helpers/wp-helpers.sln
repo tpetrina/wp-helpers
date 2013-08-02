@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UiHelpers", "UiHelpers\UiHelpers.csproj", "{608583FE-4435-4108-B691-B587C66E339A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UiHelpers.TestApp", "UiHelpers.TestApp\UiHelpers.TestApp.csproj", "{D6AE5791-A06C-4B49-90A9-47006370371B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,12 @@ Global
 		{608583FE-4435-4108-B691-B587C66E339A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{608583FE-4435-4108-B691-B587C66E339A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{608583FE-4435-4108-B691-B587C66E339A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6AE5791-A06C-4B49-90A9-47006370371B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6AE5791-A06C-4B49-90A9-47006370371B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6AE5791-A06C-4B49-90A9-47006370371B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D6AE5791-A06C-4B49-90A9-47006370371B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6AE5791-A06C-4B49-90A9-47006370371B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6AE5791-A06C-4B49-90A9-47006370371B}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
