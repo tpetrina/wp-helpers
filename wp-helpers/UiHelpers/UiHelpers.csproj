@@ -51,9 +51,9 @@
     <Reference Include="mscorlib.extensions" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmptyListBehavior.cs" />
+    <Compile Include="Behaviors\EmptyListBehavior.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SafeBehavior.cs" />
+    <Compile Include="Behaviors\SafeBehavior.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />

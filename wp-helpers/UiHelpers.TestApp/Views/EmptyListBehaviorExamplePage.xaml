@@ -1,5 +1,5 @@
-﻿<phone:PhoneApplicationPage 
-    x:Class="UiHelpers.TestApp.MainPage"
+﻿<phone:PhoneApplicationPage
+    x:Class="UiHelpers.TestApp.Views.EmptyListBehaviorExamplePage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -7,23 +7,25 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
-    xmlns:ui="clr-namespace:UiHelpers;assembly=UiHelpers"
-    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    xmlns:behaviors="clr-namespace:UiHelpers.Behaviors;assembly=UiHelpers"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
 
     <phone:PhoneApplicationPage.Resources>
 
         <ControlTemplate TargetType="ListBox"
                          x:Key="EmptyListBoxTemplate">
-            <Grid>
-                <TextBlock Text="Empty"
+            <Border Background="LightBlue">
+                <Grid>
+                    <TextBlock Text="Empty"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center" />
-            </Grid>
+                </Grid>
+            </Border>
         </ControlTemplate>
 
         <ControlTemplate TargetType="ListBox"
@@ -48,28 +50,41 @@
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="page name" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="UIHELPERS TESTAPP" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="empty list box template behavior" Margin="9,-7,0,0" Style="{StaticResource PhoneTextLargeStyle}"
+                       TextWrapping="Wrap" />
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <ListBox ItemsSource="{Binding Items}">
-                <i:Interaction.Behaviors>
-                    <ui:EmptyListBoxBehavior EmptyTemplate="{StaticResource EmptyListBoxTemplate}"
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                
+                <TextBlock Text="Click on the application bar buttons to see how the templates are set. To add items to the list box, click the right button. To clear the items from the list box, click the left button." Style="{StaticResource PhoneTextSmallStyle}"
+                           TextWrapping="Wrap"/>
+                
+                <ListBox ItemsSource="{Binding Items}"
+                         Grid.Row="1"
+                         Margin="12,12,0,0">
+                    <i:Interaction.Behaviors>
+                        <behaviors:EmptyListBoxBehavior EmptyTemplate="{StaticResource EmptyListBoxTemplate}"
                                              DefaultTemplate="{StaticResource DefaultListBoxTemplate}"/>
-                </i:Interaction.Behaviors>
-            </ListBox>
+                    </i:Interaction.Behaviors>
+                </ListBox>
+            </Grid>
         </Grid>
     </Grid>
 
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar Mode="Default" Opacity="1.0" IsMenuEnabled="True" IsVisible="True">
-            <shell:ApplicationBarIconButton Text="Init"
-                                            IconUri="/Images/init.png"
-                                            Click="InitCollection"/>
-            <shell:ApplicationBarIconButton Text="insert"
+            <shell:ApplicationBarIconButton Text="clear"
+                                            IconUri="/Images/remove.png"
+                                            Click="RemoveCollection"/>
+            <shell:ApplicationBarIconButton Text="add"
                                             IconUri="/Images/insert.png"
                                             Click="AddItemToCollection"/>
         </shell:ApplicationBar>

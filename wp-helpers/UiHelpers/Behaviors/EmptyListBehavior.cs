@@ -19,7 +19,7 @@ using System.Windows.Data;
 using System.Collections.Specialized;
 using Wp7nl.Behaviors;
 
-namespace UiHelpers
+namespace UiHelpers.Behaviors
 {
     public class EmptyListBoxBehavior : SafeBehavior<ListBox>
     {
