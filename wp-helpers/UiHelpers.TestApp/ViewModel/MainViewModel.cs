@@ -37,6 +37,11 @@ namespace UiHelpers.TestApp.ViewModel
                             {
                                 Name = "Empty List Box Template behavior",
                                 Uri = "/Views/EmptyListBehaviorExamplePage.xaml"
+                            },
+                        new ExampleViewModel
+                            {
+                                Name = "Isolated image source",
+                                Uri = "/Views/IsolatedImageSourcePage.xaml"
                             }
                     };
             }

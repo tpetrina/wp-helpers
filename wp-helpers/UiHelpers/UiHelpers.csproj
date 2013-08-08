@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Behaviors\EmptyListBehavior.cs" />
+    <Compile Include="ImageControlProperties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Behaviors\SafeBehavior.cs" />
   </ItemGroup>

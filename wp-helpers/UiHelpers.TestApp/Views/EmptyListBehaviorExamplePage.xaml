@@ -51,7 +51,7 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="UIHELPERS TESTAPP" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="TESTAPP" Style="{StaticResource PhoneTextNormalStyle}"/>
             <TextBlock Text="empty list box template behavior" Margin="9,-7,0,0" Style="{StaticResource PhoneTextLargeStyle}"
                        TextWrapping="Wrap" />
         </StackPanel>

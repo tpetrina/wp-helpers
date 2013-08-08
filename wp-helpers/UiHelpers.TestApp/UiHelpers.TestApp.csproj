@@ -92,6 +92,9 @@
     <Compile Include="Views\EmptyListBehaviorExamplePage.xaml.cs">
       <DependentUpon>EmptyListBehaviorExamplePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\IsolatedImageSourcePage.xaml.cs">
+      <DependentUpon>IsolatedImageSourcePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -103,6 +106,10 @@
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
     <Page Include="Views\EmptyListBehaviorExamplePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\IsolatedImageSourcePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -127,6 +134,7 @@
     </Content>
     <Content Include="Images\insert.png" />
     <Content Include="Images\remove.png" />
+    <Resource Include="img.png" />
     <Content Include="MVVMLight.Nuget.Readme.txt" />
     <Content Include="README_FIRST.txt" />
     <Content Include="SplashScreenImage.jpg" />
