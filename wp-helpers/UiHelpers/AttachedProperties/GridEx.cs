@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using UiHelpers.Extensions;
 
@@ -55,6 +56,50 @@ namespace UiHelpers.AttachedProperties
             var grid = o as Grid;
             if (grid != null)
                 grid.ColumnDefinitions.ParseAndFill(args.NewValue as string);
+        }
+        #endregion
+
+        #region RowCol attached property
+        public static string GetRowCol(DependencyObject obj)
+        {
+            return (string)obj.GetValue(RowColProperty);
+        }
+
+        public static void SetRowCol(DependencyObject obj, string value)
+        {
+            obj.SetValue(RowColProperty, value);
+        }
+
+        // Using a DependencyProperty as the backing store for RowCol.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty RowColProperty =
+            DependencyProperty.RegisterAttached("RowCol", typeof(string), typeof(Grid), new PropertyMetadata(string.Empty, RowCol_PropertyChangedCallback));
+
+        private static void RowCol_PropertyChangedCallback(DependencyObject o, DependencyPropertyChangedEventArgs args)
+        {
+            var grid = o as Grid;
+            if (grid == null)
+                return;
+
+            var format = args.NewValue as string;
+            if (format != null)
+            {
+                var values = format.Split(new[] {'|'}, StringSplitOptions.RemoveEmptyEntries);
+                if (values.Length == 1)
+                {
+                    grid.RowDefinitions.ParseAndFill(values[0]);
+                    grid.ColumnDefinitions.ParseAndFill(null);
+                }
+                else if (values.Length > 1)
+                {
+                    grid.RowDefinitions.ParseAndFill(values[0]);
+                    grid.ColumnDefinitions.ParseAndFill(values[1]);
+                }
+            }
+            else
+            {
+                grid.RowDefinitions.ParseAndFill(null);
+                grid.ColumnDefinitions.ParseAndFill(null);
+            }
         }
         #endregion
     }

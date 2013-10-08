@@ -92,6 +92,9 @@
     <Compile Include="Views\EmptyListBehaviorExamplePage.xaml.cs">
       <DependentUpon>EmptyListBehaviorExamplePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\GridDefinitionsPage.xaml.cs">
+      <DependentUpon>GridDefinitionsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\IsolatedImageSourcePage.xaml.cs">
       <DependentUpon>IsolatedImageSourcePage.xaml</DependentUpon>
     </Compile>
@@ -106,6 +109,10 @@
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
     <Page Include="Views\EmptyListBehaviorExamplePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GridDefinitionsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

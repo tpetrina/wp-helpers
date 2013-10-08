@@ -23,17 +23,14 @@ namespace UiHelpers.Extensions
             if (@this == null)
                 throw new NullReferenceException("@this must not be null");
 
-            // this is still valid, simply clear the definition
+            @this.Clear();
+
+            // this is still valid, definition should be empty
             if (string.IsNullOrWhiteSpace(format))
-            {
-                @this.Clear();
                 return;
-            }
 
             foreach (var unit in ParseFormat(format))
-            {
                 Add(@this, unit);
-            }
         }
 
         /// <summary>
@@ -52,17 +49,14 @@ namespace UiHelpers.Extensions
             if (@this == null)
                 throw new NullReferenceException("@this must not be null");
 
-            // this is still valid, simply clear the definition
+            @this.Clear();
+
+            // this is still valid, definition should be empty
             if (string.IsNullOrWhiteSpace(format))
-            {
-                @this.Clear();
                 return;
-            }
 
             foreach (var unit in ParseFormat(format))
-            {
                 Add(@this, unit);
-            }
         }
 
         internal static IEnumerable<GridLength> ParseFormat(string format)

@@ -42,6 +42,11 @@ namespace UiHelpers.TestApp.ViewModel
                             {
                                 Name = "Isolated image source",
                                 Uri = "/Views/IsolatedImageSourcePage.xaml"
+                            },
+                        new ExampleViewModel
+                            {
+                                Name = "Grid definitions",
+                                Uri = "/Views/GridDefinitionsPage.xaml"
                             }
                     };
             }
