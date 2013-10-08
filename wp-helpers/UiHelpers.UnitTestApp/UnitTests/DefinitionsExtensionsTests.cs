@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Windows;
 using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
-using UiHelpers.Extensions;
+using WP.Helpers.Ui.Extensions;
 
 namespace UiHelpers.TestApp.UnitTests
 {

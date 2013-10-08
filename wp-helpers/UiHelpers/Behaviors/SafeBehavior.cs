@@ -16,7 +16,9 @@ using System.Windows.Interactivity;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 
+// ReSharper disable CheckNamespace
 namespace Wp7nl.Behaviors
+// ReSharper restore CheckNamespace
 {
     /// <summary>
     /// A base class implementing the safe event detachment pattern for behaviors.
@@ -46,7 +48,7 @@ namespace Wp7nl.Behaviors
         /// <summary>
         /// The uri of the page this behavior is on
         /// </summary>
-        private Uri pageSource;
+        private Uri _pageSource;
 
         protected override void OnAttached()
         {
@@ -78,8 +80,11 @@ namespace Wp7nl.Behaviors
             if (ParentPage == null && ListenToPageBackEvent)
             {
                 ParentPage = Application.Current.RootVisual as PhoneApplicationFrame;
-                pageSource = ParentPage.CurrentSource;
-                ParentPage.Navigated += ParentPageNavigated;
+                if (ParentPage != null)
+                {
+                    _pageSource = ParentPage.CurrentSource;
+                    ParentPage.Navigated += ParentPageNavigated;
+                }
             }
             OnSetup();
         }
@@ -123,7 +128,7 @@ namespace Wp7nl.Behaviors
         /// <returns></returns>
         protected bool IsNavigatingBackToBehaviorPage(NavigationEventArgs e)
         {
-            return (e.NavigationMode == NavigationMode.Back && e.Uri.Equals(pageSource));
+            return (e.NavigationMode == NavigationMode.Back && e.Uri.Equals(_pageSource));
         }
 
         #endregion

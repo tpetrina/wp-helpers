@@ -127,9 +127,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UiHelpers\UiHelpers.csproj">
+    <ProjectReference Include="..\UiHelpers\WindowsPhone.Helpers.Ui.csproj">
       <Project>{608583FE-4435-4108-B691-B587C66E339A}</Project>
-      <Name>UiHelpers</Name>
+      <Name>WindowsPhone.Helpers.Ui</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />

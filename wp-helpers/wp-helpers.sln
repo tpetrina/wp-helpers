@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UiHelpers", "UiHelpers\UiHelpers.csproj", "{608583FE-4435-4108-B691-B587C66E339A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsPhone.Helpers.Ui", "UiHelpers\WindowsPhone.Helpers.Ui.csproj", "{608583FE-4435-4108-B691-B587C66E339A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UiHelpers.TestApp", "UiHelpers.TestApp\UiHelpers.TestApp.csproj", "{D6AE5791-A06C-4B49-90A9-47006370371B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsPhone.Helpers.Ui.TestApp", "UiHelpers.TestApp\WindowsPhone.Helpers.Ui.TestApp.csproj", "{D6AE5791-A06C-4B49-90A9-47006370371B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{12903A6D-37B4-4F73-9F2A-642488B84CD0}"
 	ProjectSection(SolutionItems) = preProject
@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{12903A
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UiHelpers.UnitTestApp", "UiHelpers.UnitTestApp\UiHelpers.UnitTestApp.csproj", "{7D42BF9B-5D9C-432D-97CC-CF72B51D56B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsPhone.Helpers.Ui.UnitTestApp", "UiHelpers.UnitTestApp\WindowsPhone.Helpers.Ui.UnitTestApp.csproj", "{7D42BF9B-5D9C-432D-97CC-CF72B51D56B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
